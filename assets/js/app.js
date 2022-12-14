@@ -1,11 +1,41 @@
-let btn = document.querySelector('#scroll-up');
+$(document).ready(function(){
 
-btn.addEventListener('click',() => {
-document.body.scrollTo({
-    top:0
-})
+	$('.ir-arriba').click(function(){
+		$('body, html').animate({
+			scrollTop: '0px'
+		}, 300);
+	});
 
-})
-document.documentElement.scrollTo({
-    top: 0
-})
+	$(window).scroll(function(){
+		if( $(this).scrollTop() > 0 ){
+			$('.ir-arriba').slideDown(300);
+		} else {
+			$('.ir-arriba').slideUp(300);
+		}
+	});
+
+});
+
+$(document).ready(main);
+
+var contador = 1;
+
+function main(){
+	$('.menu-hamburguesa').click(function(){
+		// $('nav').toggle(); 
+
+		if(contador == 1){
+			$('.navegacion').animate({
+				left: '0'
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('.navegacion').animate({
+				left: '-100%'
+			});
+		}
+
+	});
+
+};

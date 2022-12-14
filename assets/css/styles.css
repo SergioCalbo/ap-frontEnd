@@ -276,6 +276,7 @@ display:none;
     margin: 2rem 0 0;
   }
   #scroll-up{
+    display: none;
     position: fixed;
     right: 20px;
     bottom: 25px;
@@ -284,7 +285,7 @@ display:none;
     border: 2px solid whitesmoke;
 }
 #scroll-up:hover{
-    background:rgb(236, 172, 53) ;
+    background:rgb(248, 115, 6) ;
     color: #fcfcfc;
 }
   
@@ -315,6 +316,8 @@ display:none;
   
     .menu-hamburguesa {
       display: block;
+      width: 100%;
+      background:#fff;
     }
   
     .navegacion {
